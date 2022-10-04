@@ -1,16 +1,16 @@
 ﻿Console.Clear();
 
-string [] array = {"hello", "hi", "ola", "bonjour", "buongiorno", "Hej"};
+string [] array = {"Hello", "Hi", "Ola", "Bonjour", "Buongiorno", "Hej"};
 
 string [] result = new string [array.Length];
-int wordSize = 0;
+int count = 0;
 
 foreach (string value in array)
 {
     if (value.Length <=3)
     {
-    result [wordSize] = value;
-    wordSize++;
+    result [count] = value;
+    count++;
     }
 }
-Console.WriteLine(string.Join(" ", result, 0, wordSize));
+Console.WriteLine($"Элементы массива которые состоят из трех или менее символов : {(string.Join(" ", result, 0, count))}");
